@@ -1,5 +1,5 @@
 
-function min (array) {
+exports.min = function min (array) {
     min_value = array[0];
     for (i = 1; i < array.length; ++i) {
         if (array[i] < min_value) {
