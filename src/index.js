@@ -10,7 +10,13 @@ exports.min = function min (array) {
 }
 
 exports.max = function max (array) {
-    return 0;
+    max_value = array[0];
+    for (i = 1; i < array.length; ++i) {
+        if (array[i] > max_value) {
+            max_value = array[i];
+        }
+    }
+    return max_value;;
 }
 
 exports.avg = function avg (array) {
