@@ -3,7 +3,7 @@ exports.min = function min (array) {
     if (array.length == 0) {
         return 0;
     }
-    else {
+    else if (array) {
         min_value = array[0];
     for (i = 1; i < array.length; ++i) {
         if (array[i] < min_value) {
@@ -12,13 +12,14 @@ exports.min = function min (array) {
     }
     return min_value;
 }
+else return 0;
 }
 
 exports.max = function max (array) {
     if (array.length == 0) {
         return 0;
     }
-    else {
+    else if (array) {
     max_value = array[0];
     for (i = 1; i < array.length; ++i) {
         if (array[i] > max_value) {
@@ -27,13 +28,14 @@ exports.max = function max (array) {
     }
     return max_value;
 }
+else return 0;
 }
 
 exports.avg = function avg (array) {
     if (array.length == 0) {
         return 0;
     }
-    else {
+    else if (array) {
     var sum = 0;
     var count = array.length;
     for (i = 0; i < count; i++) {
@@ -41,4 +43,5 @@ exports.avg = function avg (array) {
         }
     return sum / count;
     }
+    else return 0;
 }
