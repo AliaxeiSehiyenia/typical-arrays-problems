@@ -1,22 +1,16 @@
 
-exports.min = function min (array) {
-    min = array[0];
-    max = min;
+function min (array) {
+    min_value = array[0];
     for (i = 1; i < array.length; ++i) {
-        if (array[i] > max) max = array[i];
-        if (array[i] < min) min = array[i];
+        if (array[i] < min_value) {
+            min_value = array[i];
+        }
     }
-    return min;
+    return min_value;
 }
 
 exports.max = function max (array) {
-    min = array[0];
-    max = min;
-    for (i = 1; i < array.length; ++i) {
-        if (array[i] > max) max = array[i];
-        if (array[i] < min) min = array[i];
-    }
-    return max;
+    return 0;
 }
 
 exports.avg = function avg (array) {
