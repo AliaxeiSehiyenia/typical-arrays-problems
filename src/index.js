@@ -1,15 +1,21 @@
 
 exports.min = function min (array) {
-    for (i = 0; i < array.length; ++i)
-    if (array[i] < array[i + 1]) min = array[i];
-    else max = array[i];  
+    min = array[0];
+    max = min;
+    for (i = 1; i < array.length; ++i) {
+        if (array[i] > max) max = array[i];
+        if (array[i] < min) min = array[i];
+    }
     return min;
 }
 
 exports.max = function max (array) {
-    for (i = 0; i < array.length; ++i)
-    if (array[i] > array[i + 1]) max = array[i];
-    else max = array[i];  
+    min = array[0];
+    max = min;
+    for (i = 1; i < array.length; ++i) {
+        if (array[i] > max) max = array[i];
+        if (array[i] < min) min = array[i];
+    }
     return max;
 }
 
