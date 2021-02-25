@@ -1,44 +1,39 @@
-
-exports.min = function min (array) {
-    if (array == 0 || array == null) {
-        return 0;
-    }
-    else {
-        min_value = array[0];
-    for (i = 1; i < array.length; ++i) {
-        if (array[i] < min_value) {
-            min_value = array[i];
-        }
+exports.min = function min(arrays) {
+  if (arrays == 0 || arrays == null) {
+    return 0;
+  } else {
+    let min_value = arrays[0];
+    for (array of arrays) {
+      if (array < min_value) {
+        min_value = array;
+      }
     }
     return min_value;
-}
-}
+  }
+};
 
-exports.max = function max (array) {
-    if (array == 0 || array == null) {
-        return 0;
-    }
-    else {
-    max_value = array[0];
-    for (i = 1; i < array.length; ++i) {
-        if (array[i] > max_value) {
-            max_value = array[i];
-        }
+exports.max = function max(arrays) {
+  if (arrays == 0 || arrays == null) {
+    return 0;
+  } else {
+    let max_value = arrays[0];
+    for (array of arrays) {
+      if (array > max_value) {
+        max_value = array;
+      }
     }
     return max_value;
-}
-}
+  }
+};
 
-exports.avg = function avg (array) {
-    if (array == 0 || array == null) {
-        return 0;
+exports.avg = function avg(arrays) {
+  if (arrays == 0 || arrays == null) {
+    return 0;
+  } else {
+    let sum = 0;
+    for (array of arrays) {
+      sum += array;
     }
-    else {
-    var sum = 0;
-    var count = array.length;
-    for (i = 0; i < count; i++) {
-        sum += array[i];
-        }
-    return sum / count;
-    }
-}
+    return sum / arrays.length;
+  }
+};
